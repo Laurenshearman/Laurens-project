@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class soundiceberg : MonoBehaviour
-
+public class icebergaudio : MonoBehaviour
 {
-    public AudioClip melting;
+   public AudioClip melting;
 
     // Start is called before the first frame update
     void Start()
-    {
+    { 
         
     }
 
@@ -21,8 +20,9 @@ public class soundiceberg : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-     GetComponent<AudioSource>().PlayOneShot(melting);
-     
+        if(other.tag == "Player")
+        {
+            gameObject.GetComponent<AudioSource>().PlayOneShot(melting);
+        }
     }
- 
 }
