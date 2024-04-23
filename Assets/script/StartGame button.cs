@@ -33,7 +33,7 @@ public class StartGamebutton : MonoBehaviour
 
         if(pressAmount == 1){
         //change text
-            GameObject.Find("firsttextbox").GetComponent<TMP_Text>().text="insert text here";
+            GameObject.Find("firsttextbox").GetComponent<TMP_Text>().text="this is a world to show you what rising sea levels is going to do if we dont stop it !";
 
             //change text on button
 
