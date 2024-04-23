@@ -1,18 +1,27 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class RisingFloor : MonoBehaviour
+public class RisingWater : MonoBehaviour
 {
-    public float riseSpeed = 1.0f; // Speed at which the floor rises
-    public float maxHeight = 10.0f; // Maximum height for the floor
+    public float riseSpeed = 1.0f; // Speed at which the water rises
+    private bool isRising = false; // Flag to track if the water is rising
 
-    private void Update()
+    void Update()
     {
-        // Increase the position of the floor gradually over time
-        transform.position += Vector3.up * riseSpeed * Time.deltaTime;
+        if (isRising)
+        {
+            // Increase the position of the water gradually over time
+            transform.position += Vector3.up * riseSpeed * Time.deltaTime;
+        }
+    }
 
-        // Clamp the position to the maximum height
-        transform.position = new Vector3(transform.position.x, Mathf.Min(transform.position.y, maxHeight), transform.position.z);
+    public void StartRising()
+    {
+        isRising = true;
+    }
+
+    public void StopRising()
+    {
+        isRising = false;
     }
 }
