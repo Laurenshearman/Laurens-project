@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectInteraction : MonoBehaviour
+
+public class TreePopup : MonoBehaviour
 {
-    public GameObject interactionPanel;
+    public GameObject popupPanel; // Reference to the popup panel GameObject
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            interactionPanel.SetActive(true);
+            // Activate the popup panel GameObject
+            popupPanel.SetActive(true);
         }
     }
 
@@ -18,15 +20,10 @@ public class ObjectInteraction : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            interactionPanel.SetActive(false);
+            // Deactivate the popup panel GameObject when the player exits the trigger zone
+            popupPanel.SetActive(false);
         }
     }
-
-    public void OnButtonClicked()
-    {
-        // Implement button click behavior here
-        // This method will be called when the button is clicked
-        Debug.Log("Button clicked");
-        interactionPanel.SetActive(false);
-    }
 }
+
+
