@@ -41,6 +41,10 @@ public class Dialogue : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isInRange = false;
+            // Reset index when the player exits the trigger area
+            index = 0;
+            // Deactivate the text panel GameObject when the player exits the trigger area
+            textPanelGameObject.SetActive(false);
         }
     }
 
