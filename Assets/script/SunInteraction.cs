@@ -2,17 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SunInteraction : MonoBehaviour
+
+public class Suninteraction : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject popupPanel; // Reference to the popup panel GameObject
+
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            // Activate the popup panel GameObject
+            popupPanel.SetActive(true);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            // Deactivate the popup panel GameObject when the player exits the trigger zone
+            popupPanel.SetActive(false);
+        }
     }
 }
+
+
