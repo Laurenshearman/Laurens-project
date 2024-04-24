@@ -6,13 +6,10 @@ public class ObjectInteraction : MonoBehaviour
 {
     public GameObject interactionPanel;
 
-    private bool isInRange = false;
-
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            isInRange = true;
             interactionPanel.SetActive(true);
         }
     }
@@ -21,7 +18,6 @@ public class ObjectInteraction : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            isInRange = false;
             interactionPanel.SetActive(false);
         }
     }
