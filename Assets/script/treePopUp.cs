@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class TreePopup : MonoBehaviour
+public class treepopup : MonoBehaviour
 {
     public GameObject popupPanel; // Reference to the popup panel GameObject
 
@@ -25,5 +24,7 @@ public class TreePopup : MonoBehaviour
         }
     }
 }
+
+
 
 
