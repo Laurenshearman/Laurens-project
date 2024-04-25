@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/final project loz.unity
     guid: c19bc083d1641459aab963cdb127e372
-  - enabled: 1
+  - enabled: 0
     path: Assets/POLYGON city pack/scene/DemoScene.unity
     guid: 7759de288f5d4ee449a0ca5e2244944a
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 5ed173230ed344e40bee4eb7b03496f1
   m_configObjects: {}
